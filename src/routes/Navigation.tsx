@@ -24,13 +24,12 @@ export const Navigation = () => {
                         // Posibilidad de desectructurar el contenido del map
                         routes.map((map) => (
                             <li key={map.to}>
-                            <NavLink
-                                to={map.to}
-                                className={({ isActive }) => (isActive ? "nav-active" : "")}
-                            >
-                                {" "}
-                                {map.name}{" "}
-                            </NavLink>
+                                <NavLink
+                                    to={map.to}
+                                    className={({ isActive }) => (isActive ? "nav-active" : "")}
+                                > 
+                                    {map.name}
+                                </NavLink>
                             </li>
                         ))
                         }
@@ -38,10 +37,12 @@ export const Navigation = () => {
                     </nav>
 
                     <Routes>
-                    {routes.map((map) => (
-                        <Route key={map.to} path={map.path} element={<map.Component />} />
-                    ))}
-                    <Route path="/*" element={<Navigate to={routes[0].to} replace />} />
+                        {
+                            routes.map((map) => (
+                                <Route key={map.to} path={map.path} element={<map.Component />} />
+                            ))
+                        }
+                        {/* <Route path="/*" element={<Navigate to={routes[0].to} replace />} /> */}
                     </Routes>
                 </div>
             </BrowserRouter>
