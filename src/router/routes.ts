@@ -9,18 +9,12 @@ interface Route {
     children?: Route[]
 }
 
-const Home = lazy( () => import(/*webpackChunkName: "Home"*/'../01-lazyload/pages/Home') )
 const LazyPage1 = lazy( () => import(/*webpackChunkName: "LazyPage1"*/'../01-lazyload/pages/LazyPage1') )
 const LazyPage2 = lazy( () => import(/*webpackChunkName: "LazyPage2"*/'../01-lazyload/pages/LazyPage2') )
 const LazyPage3 = lazy( () => import(/*webpackChunkName: "LazyPage3"*/'../01-lazyload/pages/LazyPage3') )
 
 
 export const routes: Route[] = [
-    {
-        path: '/home',
-        component: Home,
-        name: 'Home',
-    },
     {
         path: '/lazy1',
         component: LazyPage1,
