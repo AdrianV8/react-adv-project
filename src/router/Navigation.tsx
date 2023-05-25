@@ -12,6 +12,7 @@ import logo from "../logo.svg";
 import { routes } from "./routes";
 
 export const Navigation = () => {
+  
   return (
     <Suspense fallback={"Cargando..."}>
       <BrowserRouter>
@@ -42,7 +43,7 @@ export const Navigation = () => {
             ))}
 
             
-            <Route path="/*" element={ <Navigate to={routes[0].path} replace /> }/>
+            <Route path="*" element={ <Navigate to={routes[0].path} replace /> }/>
           </Routes>
         </div>
       </BrowserRouter>
