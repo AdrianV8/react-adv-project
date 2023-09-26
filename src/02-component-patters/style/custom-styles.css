@@ -1,0 +1,26 @@
+.bg-dark{
+    background-color: rgb(56, 56, 56);
+}
+.box-shadow{
+    box-shadow: 3px 3px 7px rgb(248, 203, 78);
+}
+
+.custom-image{
+    border-radius: 20px;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+.custom-button *{
+    color: white;
+    border: transparent;
+}
+
+.text-white{
+    color: white;
+}
+
+.center{
+    display: flex; 
+    justify-content: center 
+}

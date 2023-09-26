@@ -1,6 +1,6 @@
 
 import { ProductCard, ProductTitle, ProductImage, ProductButtons } from '../components';
-
+import '../style/custom-styles.css'
 
 
 const product = {
@@ -25,17 +25,32 @@ export const Shoppingpage = () => {
 
               {/* COMPOUNT COMPONENT PATTERT */}
               <ProductCard product={ product }>
-                  <ProductCard.Image/>
-                  <ProductCard.Title title={'Coffe Muck'}/>
-                  <ProductCard.Buttons/>
+                  <ProductCard.Image className='custom-image'/>
+                  <ProductCard.Title title={'Coffe Muck'} className='center'/>
+                  <ProductCard.Buttons className='center'/>
               </ProductCard>
               
               
-              <ProductCard product={ product }>
+              <ProductCard 
+                product={ product }
+                className='bg-dark box-shadow'
+              >
+                  <ProductImage className='custom-image'/>
+                  <ProductTitle className='text-white center'/>
+                  <ProductButtons className='custom-button center'/>
+              </ProductCard>
+              
+              <ProductCard 
+                product={ product }
+                style={{backgroundColor: '#70D1F8'}}
+              >
                   <ProductImage/>
-                  <ProductTitle title={''}/>
-                  <ProductButtons/>
+                  <ProductTitle/>
+                  <ProductButtons style={{
+                    display: 'flex', justifyContent: 'end'
+                  }}/>
               </ProductCard>
+
             </div>
         </div>
     </>
