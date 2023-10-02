@@ -24,3 +24,9 @@
     display: flex; 
     justify-content: center 
 }
+
+.shopping-card{
+    position: fixed;
+    top: 0px;
+    right: 10px;
+}
